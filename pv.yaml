@@ -10,4 +10,4 @@ spec:
   persistentVolumeReclaimPolicy: Retain
   storageClassName: standard
   hostPath:
-    path: /etc/kubrenetes/manifests
+    path: /etc/kubernetes/manifests
