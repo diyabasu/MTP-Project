@@ -7,9 +7,9 @@ spec:
     - name: my-container
       image: my-image
       volumeMounts:
-        - name: my-pvc-mount
-          mountPath: /path/to/mount
+        - name: my-pvc-mount //this is the name of the mount.
+          mountPath: /pathI   //this shows the path in the container where the PNG file should be downloaded.
   volumes:
     - name: my-pvc-mount
       persistentVolumeClaim:
-        claimName: etc/kubernetes/manifests
+        claimName: my-pvc
