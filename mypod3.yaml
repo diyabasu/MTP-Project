@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-pod
+spec:
+  containers:
+    - name: my-container
+      image: my-image
+      volumeMounts:
+        - name: my-pvc-mount
+          mountPath: /path/to/mount
+  volumes:
+    - name: my-pvc-mount
+      persistentVolumeClaim:
+        claimName: etc/kubernetes/manifests
