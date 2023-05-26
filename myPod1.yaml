@@ -5,7 +5,7 @@ metadata:
 spec:
   containers:
     - name: my-container
-      image: my-image
+      image: my-image //the name of the image from the docker hub.
       volumeMounts:
         - name: my-pvc-mount //this is the name of the mount.
           mountPath: /pathI   //this shows the path in the container where the PNG file should be downloaded.
