@@ -3,12 +3,19 @@ kind: Pod
 metadata:
   name: my-pod
 spec:
+initContainers:
+    - name: init-container //the name of the image from the docker hub
+      image: your-image// the name of the image from the docker hub
+      command: ["sh", "-c", "mkdir -p /path_standard"]
+      volumeMounts:
+        - name: my-volume
+          mountPath: /path_standard
   containers:
-    - name: my-container
+    - name: my-container //the name of my container.
       image: my-image //the name of the image from the docker hub.
       volumeMounts:
-        - name: my-pvc-mount //this is the name of the mount.
-          mountPath: /pathI   //this shows the path in the container where the PNG file should be downloaded.
+        - name: my-pvc-mount  // this is the name of the mount.
+          mountPath: /path_standard   //this shows the path in the container where the PNG file should be downloaded.
   volumes:
     - name: my-pvc-mount
       persistentVolumeClaim:
