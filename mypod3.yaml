@@ -3,6 +3,10 @@ kind: Pod
 metadata:
   name: my-pod
 spec:
+initContainers:
+    - name: init-container //the name of the image from the docker hub
+      image: your-image// the name of the image from the docker hub
+      command: ["sh", "-c", "mkdir -p /pathIII"]
   containers:
     - name: my-container
       image: my-image
@@ -11,5 +15,5 @@ spec:
           mountPath: /pathIII
   volumes:
     - name: my-pvc-mount
-      persistentVolumeClaim:
+     configMap:
         claimName: configmapII
