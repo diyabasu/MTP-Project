@@ -3,10 +3,7 @@ kind: Pod
 metadata:
   name: mypodIII
 spec:
-initContainers:
-    - name: init-container 
-      image: your-image// the name of the image from the docker hub
-      command: ["sh", "-c", "mkdir -p /pathIII"] //path created in the container
+
   containers:
     - name: my-container
       image: my-image
