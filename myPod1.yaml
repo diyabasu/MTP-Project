@@ -7,8 +7,8 @@ spec:
         - name: my-volume
           mountPath:  WORKDIR /app // the path where the PNG file  is to be downloaded.
   containers:
-    - name: my-container //the name of my container.
-      image: my-image //the name of the image from the docker hub.
+    - name: mycontainerI //the name of my container.
+      image: docker.io/alvinbanerjee/standard:latest //the name of the image from the docker hub.
       volumeMounts:
         - name: my-pvc-mount  // this is the name of the mount.
           mountPath: WORKDIR /app  //this shows the path in the container where the PNG file should be downloaded.
