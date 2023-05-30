@@ -4,8 +4,8 @@ metadata:
   name: mypodII
 spec:
   containers:
-    - name: my-container
-      image: my-image
+    - name: mycontainerII
+      image: docker.io/alvinbanerjee/optimized1
       volumeMounts:
         - name: mypvcmountII
           mountPath: WORKDIR /app //mount path 
