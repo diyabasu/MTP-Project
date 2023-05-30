@@ -15,7 +15,7 @@ initContainers:
       image: my-image //the name of the image from the docker hub.
       volumeMounts:
         - name: my-pvc-mount  // this is the name of the mount.
-          mountPath: /path_standard   //this shows the path in the container where the PNG file should be downloaded.
+          mountPath: WORKDIR /app  //this shows the path in the container where the PNG file should be downloaded.
   volumes:
     - name: my-pvc-mount
       persistentVolumeClaim:
