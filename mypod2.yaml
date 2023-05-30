@@ -12,7 +12,7 @@ initContainers:
       image: my-image
       volumeMounts:
         - name: mypvcmountII
-          mountPath: /pathII //mount path 
+          mountPath: /WORKDIR /app //mount path 
   volumes:
     - name: mypvcmountII
       configMap:
