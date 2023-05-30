@@ -3,16 +3,12 @@ kind: Pod
 metadata:
   name: mypodII
 spec:
-initContainers:
-    - name: init-container //the name of the image from the docker hub
-      image: your-image// the name of the image from the docker hub
-      command: ["sh", "-c", "mkdir -p /pathII"]
   containers:
     - name: my-container
       image: my-image
       volumeMounts:
         - name: mypvcmountII
-          mountPath: /WORKDIR /app //mount path 
+          mountPath: WORKDIR /app //mount path 
   volumes:
     - name: mypvcmountII
       configMap:
